@@ -36,7 +36,7 @@ namespace button_clicks_with_two_forms
                         _form2.Disposed += (sender, e) => Close();
                     }
                     _form2.Location = new Point(Location.X + Width + 10, Location.Y);
-                    _form2.Show(this); // Passing 'this' ensures Form 2 will stay in front of Form 1
+                    _form2.Show(owner: this); // Passing 'this' ensures Form 2 will stay in front of Form 1
                 }
                 else _form2.Hide();
             };
@@ -55,7 +55,7 @@ namespace button_clicks_with_two_forms
         {
             if ((_form2 != null) && !_form2.IsDisposed)
             {
-                _form2?.Dispose();
+                _form2.Dispose();
             }
             base.OnFormClosing(e);
         }
