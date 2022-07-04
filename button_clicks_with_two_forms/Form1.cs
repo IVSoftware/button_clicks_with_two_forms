@@ -27,7 +27,7 @@ namespace button_clicks_with_two_forms
                         _form2.FormClosing += (sender, e) =>
                         {
                             // Prevent Form 2 from disposing its Handle (until
-                            // until this form closes and explicitly disposes it).
+                            // this form closes and explicitly disposes it).
                             e.Cancel = true;
                             // Hide it instead
                             ((Form)sender).Visible = false;
