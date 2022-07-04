@@ -30,7 +30,7 @@ namespace button_clicks_with_two_forms
                             // this form closes and explicitly disposes it).
                             e.Cancel = true;
                             // Hide it instead
-                            ((Form)sender).Visible = false;
+                            _form2.Hide();
                             checkBoxShowForm2.Checked = false;
                         };
                         _form2.Disposed += (sender, e) => Close();
